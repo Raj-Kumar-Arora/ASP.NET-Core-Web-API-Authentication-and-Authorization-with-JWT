@@ -36,6 +36,6 @@ namespace JWT_Demo.Controllers
                 };
             }
             return null;
-        } (Json Web Token)
+        }
     }
 }
