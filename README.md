@@ -106,19 +106,39 @@ Protected API Access
 
 ## 📸 API Preview
 
-### Swagger UI
+### Swagger API Overview
 
-![Swagger Home](JWT_Demo/screenshots/swagger-home.png)
+The API endpoints are documented and available through Swagger UI.
 
-### JWT Authentication
+![Swagger API Overview](JWT_Demo/screenshots/swagger-home.png)
+
+
+### Login and JWT Token Generation
+
+The login endpoint validates user credentials and generates a JWT access token.
+
+![Login Endpoint](JWT_Demo/screenshots/login-endpoint.png)
+
+
+### Swagger JWT Authorization
+
+JWT Bearer authentication is configured in Swagger UI to access protected endpoints.
 
 ![Swagger Authorization](JWT_Demo/screenshots/swagger-authorize.png)
 
-### Protected Endpoints (User Info & All User Claims)
 
-![Protected Endpoint](JWT_Demo/screenshots/swagger-user-info.png)
+### Protected Endpoints (User Info & JWT Claims)
 
-![Protected Endpoint](JWT_Demo/screenshots/swagger-user-claims-all.png)
+Authenticated users can access protected APIs using the generated JWT token.
+
+#### Authenticated User Information
+
+![User Info Endpoint](JWT_Demo/screenshots/swagger-user-info.png)
+
+
+#### JWT Claims Information
+
+![JWT Claims Endpoint](JWT_Demo/screenshots/swagger-user-claims-all.png)
 
 ---
 
