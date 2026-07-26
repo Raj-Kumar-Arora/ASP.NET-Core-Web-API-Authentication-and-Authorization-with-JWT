@@ -14,10 +14,17 @@ namespace JWT_Demo.Controllers
         /// authenticate the user, from token we can fetch claims (UserModel) which contains roles along with other user info.
         [HttpGet("UserInfo")]
         [Authorize]
-        public IActionResult GetAdmins()
+        public IActionResult GetUserInfo()
         {
             var currentUser = GetCurrentUser();
-            return Ok($"Hi {currentUser?.DisplayName}, you are an {currentUser?.Role}");
+
+            return Ok(new
+            {
+                currentUser.Username,
+                currentUser.DisplayName,
+                currentUser.Email,
+                currentUser.Role
+            });
         }
 
         private UserModel GetCurrentUser()
@@ -37,5 +44,53 @@ namespace JWT_Demo.Controllers
             }
             return null;
         }
+
+        #region AdministratorOnly
+        [Authorize(Roles = "Administrator")]
+        [HttpGet("Administrator")]
+        public IActionResult AdministratorOnly()
+        {
+            var currentUser = GetCurrentUser();
+
+            return Ok(new
+            {
+                Message = $"Welcome {currentUser?.DisplayName}",
+                Role = currentUser?.Role,
+                Access = "Administrator Only"
+            });
+        }
+        #endregion AdministratorOnly
+
+
+        #region StandardUserOnly
+        [Authorize(Roles = "StandardUser")]
+        [HttpGet("StandardUser")]
+        public IActionResult StandardUserOnly()
+        {
+            var currentUser = GetCurrentUser();
+
+            return Ok(new
+            {
+                Message = $"Welcome {currentUser?.DisplayName}",
+                Role = currentUser?.Role,
+                Access = "Standard User Only"
+            });
+        }
+        #endregion StandardUserOnly
+
+        #region GetClaims
+        [Authorize]
+        [HttpGet("Claims")]
+        public IActionResult GetClaims()
+        {
+            var claims = User.Claims.Select(c => new
+            {
+                c.Type,
+                c.Value
+            });
+
+            return Ok(claims);
+        }
+        #endregion GetClaims
     }
 }
