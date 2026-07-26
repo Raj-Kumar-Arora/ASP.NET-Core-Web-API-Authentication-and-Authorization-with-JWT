@@ -108,17 +108,17 @@ Protected API Access
 
 ### Swagger UI
 
-![Swagger Home](screenshots/swagger-home.png)
+![Swagger Home](JWT_Demo/screenshots/swagger-home.png)
 
 ### JWT Authentication
 
-![Swagger Authorization](screenshots/swagger-authorize.png)
+![Swagger Authorization](JWT_Demo/screenshots/swagger-authorize.png)
 
 ### Protected Endpoint
 
-![Protected Endpoint](screenshots/swagger-user-info.png)
+![Protected Endpoint](JWT_Demo/screenshots/swagger-user-info.png)
 
-![Protected Endpoint](screenshots/swagger-user-claims-all.png)
+![Protected Endpoint](JWT_Demo/screenshots/swagger-user-claims-all.png)
 
 ---
 
