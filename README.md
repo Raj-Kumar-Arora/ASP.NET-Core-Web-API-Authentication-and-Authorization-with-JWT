@@ -114,7 +114,7 @@ Protected API Access
 
 ![Swagger Authorization](JWT_Demo/screenshots/swagger-authorize.png)
 
-### Protected Endpoint
+### Protected Endpoints (User Info & All User Claims)
 
 ![Protected Endpoint](JWT_Demo/screenshots/swagger-user-info.png)
 
