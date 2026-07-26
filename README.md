@@ -117,7 +117,7 @@ The API endpoints are documented and available through Swagger UI.
 
 The login endpoint validates user credentials and generates a JWT access token.
 
-![Login Endpoint](JWT_Demo/screenshots/login-endpoint.png)
+![Login Endpoint](JWT_Demo/screenshots/swagger-login-endpoint.png)
 
 
 ### Swagger JWT Authorization
